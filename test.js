@@ -10,5 +10,5 @@
   //   window.location.reload();
   // };
 
-  document.body.insertAdjacentHTML('afterstart', '<div id="two">two</div>');
+  document.body.insertAdjacentHTML('afterbegin', '<div id="two">two</div>');
 })();
