@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📓</title>
+  <style>
+    body { width: 500px; margin: 0 auto; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+
+<h1>Bookmarklets</h1>
+
+<p>Drag the link into your bookmarks bar, navigate to a page. Clicking the bookmark will run some javascript code in the context of the current page.<p>
+
+<hr />
+
+<h2>Purge</h2>
+
+<p>Sends a request to the current page url with `PURGE` method (instead of `GET`) and then reloads the current page. This is the equivalent of running `curl -X PURGE https://example.com` in the command line terminal and refreshing.</p>
+
+<a href="javascript: (async() => {await fetch(window.location, {method:'PURGE'}); window.location.reload();})();">PURGE</a> <- drag this to bookmarks bar
+
+<hr />
+
+<h2>log headers</h2>
+
+<p>Creates log the headers from a new request to the current page.</p>
+
+<a href="javascript: 
+fetch(window.location.href).then((res) => {
+  const h = {};
+  res.headers.forEach((v,k) => h[k] = v);
+  console.table(h);
+});
+">log headers</a> <- drag this to bookmarks bar
+
+</body>
+</html>
