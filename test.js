@@ -11,14 +11,14 @@ document.body.insertAdjacentHTML(
 #debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:transparent; color:inherit; font-size:inherit; }
 #debug-tool-panel button:hover { color:silver; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; border:none; }
-#debug-tool-panel #options { display:flex; flex-direction:column; gap:10px; }
-#debug-tool-panel #options button { border: 1px solid silver; }
-#debug-tool-panel #results { text-align:left; }
+#debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; }
+#debug-tool-panel #layout button { border: 1px solid silver; }
+#debug-tool-panel #layout #results { text-align:left; }
 </style>
 
 <button id="panel-close" onclick="document.getElementById('debug-tool-panel').remove()">X</button>
 
-<div id="options">
+<div id="layout">
 
 <button onclick="
 const purge = async () => {
@@ -40,9 +40,9 @@ const getHeaders = async () => {
 getHeaders();
 ">HEADERS</button>
 
-</div>
-
 <div id="results" />
+
+</div>
 
 </div>
 `,
