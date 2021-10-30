@@ -9,8 +9,9 @@ document.body.insertAdjacentHTML(
 <style>
 #debug-tool-panel { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000; padding:30px; background:grey; color:white; box-shadow:0 10px 20px silver; font-size:10px; line-height:11px; }
 #debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; }
+#debug-tool-panel button:hover { color:silver; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; }
-#debug-tool-panel #options { text-align:center; }
+#debug-tool-panel #options { display:flex; flex-direction:column; gap:10px; }
 #debug-tool-panel #options button { border: 1px solid silver; }
 </style>
 
