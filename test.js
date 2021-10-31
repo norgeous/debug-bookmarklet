@@ -35,7 +35,6 @@ const getHeaders = async () => {
   const res = await fetch(window.location.href);
   const h = {}; res.headers.forEach((v,k) => h[k] = v);
   const rows = Object.entries(h).map(([k,v]) => '<tr><td>' + k + '</td><td>' + v + '</td></tr>').join('');
-  console.log({rows});
   document.querySelector('#debug-tool-panel #results').innerHTML = '<table>' + rows + '</table>';
 };
 getHeaders();
