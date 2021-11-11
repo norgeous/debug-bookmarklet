@@ -11,17 +11,19 @@ document.body.insertAdjacentHTML(
 #debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:transparent; color:inherit; font-size:inherit; }
 #debug-tool-panel button:hover { color:silver; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; border:none; }
-#debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; }
+#debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
 #debug-tool-panel #layout button { border: 1px solid silver; }
 #debug-tool-panel #layout #results { text-align:left; }
 #debug-tool-panel #layout td { padding:0 5px; }
+#debug-tool-panel #powered-by { font-size:15px; line-height:2em; }
 </style>
 
 <button id="panel-close" onclick="document.getElementById('debug-tool-panel').remove()">X</button>
 
 <div id="layout">
 
-<div>powered by: <span id="serverinfo">detecting...</span></div>
+<div>powered by:</div>
+<div id="powered-by">detecting...</div>
 
 <button onclick="
 const purge = async () => {
@@ -46,5 +48,5 @@ const getPoweredBy = () => {
   if (h.link?.includes('api.w.org')) return 'Wordpress';
   return 'Unknown';
 };
-document.querySelector('#debug-tool-panel #serverinfo').innerHTML = getPoweredBy();
+document.querySelector('#debug-tool-panel #powered-by').innerHTML = getPoweredBy();
 })();
