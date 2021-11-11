@@ -21,7 +21,7 @@ document.body.insertAdjacentHTML(
 
 <div id="layout">
 
-<div>SERVER: <span id="serverinfo">detecting...</span></div>
+<div>powered by: <span id="serverinfo">detecting...</span></div>
 
 <button onclick="
 const purge = async () => {
@@ -43,9 +43,8 @@ const res = await fetch(window.location.href);
 const h = {}; res.headers.forEach((v,k) => h[k] = v);
 const getPoweredBy = () => {
   if (h['x-powered-by']) return h['x-powered-by'];
-  if (h.link.includes('api.w.org')) return 'Wordpress';
+  if (h.link?.includes('api.w.org')) return 'Wordpress';
   return 'Unknown';
 };
-const poweredBy = getPoweredBy();
-document.querySelector('#debug-tool-panel #serverinfo').innerHTML = poweredBy;
+document.querySelector('#debug-tool-panel #serverinfo').innerHTML = getPoweredBy();
 })();
