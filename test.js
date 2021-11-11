@@ -14,7 +14,7 @@ document.body.insertAdjacentHTML(
 #debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
 #debug-tool-panel #layout button { border: 1px solid silver; }
 #debug-tool-panel #layout #results { text-align:left; }
-#debug-tool-panel #layout td { padding:0 5px; }
+#debug-tool-panel #layout td { padding:0 5px; white-space:nowrap; }
 #debug-tool-panel #powered-by { font-size:15px; line-height:2em; }
 </style>
 
