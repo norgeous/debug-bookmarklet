@@ -26,13 +26,21 @@ document.body.insertAdjacentHTML(
 <div id="powered-by">detecting...</div>
 
 <button onclick="
-const purge = async () => {
+(async () => {
   const res = await fetch(window.location, { method:'PURGE' });
   document.querySelector('#debug-tool-panel #results').innerHTML = res.status; 
   if (res.status === 200) window.location.reload();
-};
-purge();
+})();
 ">☠️ PURGE</button>
+
+<button onclick="
+(async () => {
+  const res = await fetch(window.location.href);
+  const h = {}; res.headers.forEach((v,k) => h[k] = v);
+  const rows = Object.entries(h).map(([k,v]) => '<tr><td>' + k + '</td><td>' + v + '</td></tr>').join('');
+  document.querySelector('#debug-tool-panel #results').innerHTML = '<table>' + rows + '</table>';
+})();
+">🕵️ HEADERS</button>
 
 <div id="results" />
 
