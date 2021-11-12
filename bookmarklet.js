@@ -57,6 +57,7 @@ const h = {}; res.headers.forEach((v,k) => h[k] = v);
 const getPoweredBy = () => {
   if (h['x-powered-by']) return h['x-powered-by'];
   if (h.link?.includes('api.w.org')) return 'Wordpress';
+  if (h.server) return h.server;
   return 'Unknown';
 };
 document.querySelector('#debug-tool-panel #powered-by').innerHTML = getPoweredBy();
