@@ -12,7 +12,7 @@ document.body.insertAdjacentHTML(
 #debug-tool-panel button:hover { color:#0ff; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; }
 #debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
-#debug-tool-panel #layout button { text-align:left; }
+#debug-tool-panel #layout button { text-align:left; padding:15px; }
 #debug-tool-panel #layout #results { text-align:left; }
 #debug-tool-panel #layout td { padding:0 5px; white-space:nowrap; background:transparent; }
 #debug-tool-panel #powered-by { font-size:15px; line-height:2em; }
