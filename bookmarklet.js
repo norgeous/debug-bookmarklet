@@ -7,8 +7,8 @@ document.body.insertAdjacentHTML(
 <div id="debug-tool-panel">
 
 <style>
-#debug-tool-panel { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000; padding:30px; background:grey; color:white; box-shadow:0 10px 20px #0007; border:1px solid silver; font-size:10px; line-height:14px; font-family:arial; }
-#debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:transparent; color:inherit; font-size:inherit; }
+#debug-tool-panel { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000; padding:30px; background:black; color:white; box-shadow:0 10px 20px #0007; border:1px solid silver; font-size:10px; line-height:14px; font-family:arial; }
+#debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:#ca55e77e; color:inherit; font-size:inherit; }
 #debug-tool-panel button:hover { color:silver; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; border:none; }
 #debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
