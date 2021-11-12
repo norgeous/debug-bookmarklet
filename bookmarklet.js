@@ -27,7 +27,7 @@ document.body.insertAdjacentHTML(
 <button onclick="
 (async () => {
   const res = await fetch(window.location, { method:'PURGE' });
-  document.querySelector('#debug-tool-panel #results').innerHTML = res.status; 
+  document.querySelector('#debug-tool-panel #results').innerHTML = res.status+' '+res.statusText; 
   if (res.status === 200) window.location.reload();
 })();
 ">☠️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Request cache PURGE</button>
