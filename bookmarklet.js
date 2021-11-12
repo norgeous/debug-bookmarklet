@@ -30,7 +30,7 @@ document.body.insertAdjacentHTML(
   document.querySelector('#debug-tool-panel #results').innerHTML = res.status; 
   if (res.status === 200) window.location.reload();
 })();
-">☠️ Request cache PURGE</button>
+">☠️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Request cache PURGE</button>
 
 <button onclick="
 (async () => {
@@ -39,11 +39,11 @@ document.body.insertAdjacentHTML(
   const rows = Object.entries(h).map(([k,v]) => '<tr><td>' + k + '</td><td>' + v + '</td></tr>').join('');
   document.querySelector('#debug-tool-panel #results').innerHTML = '<table>' + rows + '</table>';
 })();
-">🕵️ Show page headers</button>
+">🕵️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Show page headers</button>
 
 <button onclick="
 document.querySelector('body').classList.toggle('ad-skin-active');
-">🔄 Toggle .ad-skin-active</button>
+">🔄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toggle .ad-skin-active</button>
 
 <div id="results" />
 
