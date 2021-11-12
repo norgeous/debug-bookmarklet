@@ -12,6 +12,7 @@ document.body.insertAdjacentHTML(
 #debug-tool-panel button:hover { color:#0ff; }
 #debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; }
 #debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
+#debug-tool-panel #layout button { text-align:left; }
 #debug-tool-panel #layout #results { text-align:left; }
 #debug-tool-panel #layout td { padding:0 5px; white-space:nowrap; background:transparent; }
 #debug-tool-panel #powered-by { font-size:15px; line-height:2em; }
@@ -21,8 +22,7 @@ document.body.insertAdjacentHTML(
 
 <div id="layout">
 
-<div>powered by:</div>
-<div id="powered-by">detecting...</div>
+<div>powered by: <span id="powered-by">detecting...</span></div>
 
 <button onclick="
 (async () => {
@@ -30,7 +30,7 @@ document.body.insertAdjacentHTML(
   document.querySelector('#debug-tool-panel #results').innerHTML = res.status; 
   if (res.status === 200) window.location.reload();
 })();
-">☠️ PURGE</button>
+">☠️ Request cache PURGE</button>
 
 <button onclick="
 (async () => {
@@ -39,7 +39,11 @@ document.body.insertAdjacentHTML(
   const rows = Object.entries(h).map(([k,v]) => '<tr><td>' + k + '</td><td>' + v + '</td></tr>').join('');
   document.querySelector('#debug-tool-panel #results').innerHTML = '<table>' + rows + '</table>';
 })();
-">🕵️ HEADERS</button>
+">🕵️ Show page headers</button>
+
+<button onclick="
+document.querySelector('body').classList.toggle('ad-skin-active');
+">🔄 Toggle .ad-skin-active</button>
 
 <div id="results" />
 
