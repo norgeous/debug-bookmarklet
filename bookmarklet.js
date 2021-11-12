@@ -8,13 +8,12 @@ document.body.insertAdjacentHTML(
 
 <style>
 #debug-tool-panel { position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000; padding:30px; background:black; color:white; box-shadow:0 10px 20px #0007; border:1px solid silver; font-size:10px; line-height:14px; font-family:arial; }
-#debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:#ca55e77e; color:inherit; font-size:inherit; }
-#debug-tool-panel button:hover { color:silver; }
-#debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; border:none; }
+#debug-tool-panel button { cursor:pointer; padding:10px; line-height:0; background:#ca55e77e; color:inherit; font-size:inherit; border:none; }
+#debug-tool-panel button:hover { color:#0ff; }
+#debug-tool-panel #panel-close { position:absolute; right:0; top:0; width:30px; height:30px; }
 #debug-tool-panel #layout { display:flex; flex-direction:column; gap:10px; text-align:center; }
-#debug-tool-panel #layout button { border: 1px solid silver; }
 #debug-tool-panel #layout #results { text-align:left; }
-#debug-tool-panel #layout td { padding:0 5px; white-space:nowrap; }
+#debug-tool-panel #layout td { padding:0 5px; white-space:nowrap; background:transparent; }
 #debug-tool-panel #powered-by { font-size:15px; line-height:2em; }
 </style>
 
